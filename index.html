@@ -57,6 +57,27 @@
 @media (max-width: 380px) {
   .leaflet-popup-content { max-width: 190px; font-size: 11px; }
 }
+  /* PHONE: keep popups from taking over the screen */
+@media (max-width: 600px) {
+.leaflet-popup {
+  width: auto !important;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-content {
+  width: 240px !important;
+  max-width: 240px !important;
+}
+
+.leaflet-popup-content {
+  max-height: 45vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 8px 10px;
+  font-size: 12px;
+  line-height: 1.15;
+}
+}
 </style>
 
 <!-- Robust Leaflet loader (multiple CDNs) -->
